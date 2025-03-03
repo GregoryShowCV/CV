@@ -60,8 +60,24 @@
   
 </style>
 </head>
-<body class="position-relative">
+<body class="position-relative overflow-hidden">
 
+
+    <div class="load-page-frame">
+        <div class="lds-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p>Loading</p>
+        </div>
+      
+    </div>
     <div class="translate">
         <div class="translate-button translate-button-active" language="english">EN</div>
         <div class="translate-button" language="spanish">ES</div> </div>
@@ -264,7 +280,8 @@
 </body>
 <!-- <script src="../js/utils.js"></script> -->
  <script>
-
+const body = document.querySelector('body');
+const loadPageFrame = document.querySelector('.load-page-frame');
 const translateButtons = document.querySelectorAll('.translate-button');
 const h2 = document.querySelectorAll('h2')
 const backButton = document.querySelectorAll('.back-button h4')
@@ -289,6 +306,13 @@ scrollBtn.addEventListener('click', function() {
     document.querySelector('body').scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+window.onload = function()
+{
+    body.classList.remove('overflow-hidden')
+    body.classList.add('overflow-auto')
+    loadPageFrame.classList.add('load-page-frame-animation')
+
+}
 
 
 const FooterCl= document.querySelectorAll('.footer-cl')

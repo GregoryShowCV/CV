@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+const loadPageFrame = document.querySelector('.load-page-frame');
 const brochureImagePhotoHovers = document.querySelectorAll('.brochure-image-photo');
 const videoKnowLedgeExtras = document.querySelectorAll('.video-knoewlegde-extras');
 // const sourceElementvideoKnowledgeExtra = videoKnowLedgeExtra.querySelector('source');
@@ -68,6 +70,19 @@ var currentDate = new Date()
 todayYears.forEach(function(element){
     element.textContent =currentDate.getFullYear();
 })
+
+
+
+window.onload = function()
+{
+    body.classList.remove('overflow-hidden')
+    body.classList.add('overflow-auto')
+    loadPageFrame.classList.add('load-page-frame-animation')
+
+}
+
+
+
 
 brochureImagePhotoHovers.forEach((brochureImagePhotoHover, index) => {
     brochureImagePhotoHover.addEventListener('mouseover', () => {

@@ -60,7 +60,25 @@
   
 </style>
 </head>
-<body class="position-relative">
+<body class="position-relative overflow-hidden">
+
+
+    <div class="load-page-frame">
+        <div class="lds-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p>Loading</p>
+        </div>
+      
+    </div>
+
 
     <div class="translate">
         <div class="translate-button translate-button-active" language="english">EN</div>
@@ -77,12 +95,12 @@
 
 <section class="margin-top-4">
 
-    <img src="../img/Blender_logo_no_text.svg.png" class="width-10 width-100px-m1023px margin-0-auto display-flex" class="display-grid" alt="">
+    <img src="../img/Blender_logo_no_text.svg.webp" class="width-10 width-100px-m1023px margin-0-auto display-flex" class="display-grid" alt="">
     <h1 class="title text-align-center padding-4 margin-2 ">Blender</h1>
 </section>
 
 <div class="back-button">
-    <img   src="../img/Arrow.png" alt="">
+    <img   src="../img/Arrow.webp" alt="">
     <div class="back-button-text"><h4>Back</h4></div>
     <a href="../#extra-knowledge"></a>
 </div>
@@ -99,7 +117,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/1.png"  class=" explain-left-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/1.webp"  class=" explain-left-image-frame " alt="">
                 </div>
             </div>
             
@@ -120,7 +138,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/2.png"  class=" explain-right-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/2.webp"  class=" explain-right-image-frame " alt="">
                 </div>
             </div>
             
@@ -140,7 +158,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/3.png"  class=" explain-left-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/3.webp"  class=" explain-left-image-frame " alt="">
                 </div>
             </div>
             
@@ -161,7 +179,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/4.png"  class=" explain-right-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/4.webp"  class=" explain-right-image-frame " alt="">
                 </div>
             </div>
             
@@ -182,7 +200,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/5.png"  class=" explain-left-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/5.webp"  class=" explain-left-image-frame " alt="">
                 </div>
             </div>
             
@@ -203,7 +221,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/6.png"  class=" explain-right-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/6.webp"  class=" explain-right-image-frame " alt="">
                 </div>
             </div>
             
@@ -224,7 +242,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/StreetBlender1.png"  class=" explain-left-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/StreetBlender1.webp"  class=" explain-left-image-frame " alt="">
                 </div>
             </div>
             
@@ -246,7 +264,7 @@
                 </div>
                
                 <div class="explain-image-frame margin-top-4">
-                    <img src="../img/portfolio/Blender/StreetBlender1Zoom.png"  class=" explain-right-image-frame " alt="">
+                    <img src="../img/portfolio/Blender/StreetBlender1Zoom.webp"  class=" explain-right-image-frame " alt="">
                 </div>
             </div>
             
@@ -306,6 +324,9 @@
 <!-- <script src="../js/utils.js"></script> -->
  <script>
 
+
+const body = document.querySelector('body');
+const loadPageFrame = document.querySelector('.load-page-frame');
 const translateButtons = document.querySelectorAll('.translate-button');
 const h2 = document.querySelectorAll('h2')
 const backButton = document.querySelectorAll('.back-button h4')
@@ -325,6 +346,17 @@ window.addEventListener('scroll', function() {
         scrollBtn.style.display = 'none';
     }
 });
+
+
+
+window.onload = function()
+{
+    body.classList.remove('overflow-hidden')
+    body.classList.add('overflow-auto')
+    loadPageFrame.classList.add('load-page-frame-animation')
+
+}
+
 
 scrollBtn.addEventListener('click', function() {
     document.querySelector('html').scrollTo({ top: 0, behavior: 'smooth' });

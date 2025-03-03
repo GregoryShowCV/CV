@@ -60,7 +60,25 @@
   
 </style>
 </head>
-<body class="position-relative">
+<body class="position-relative overflow-hidden">
+
+
+    <div class="load-page-frame">
+        <div class="lds-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p>Loading</p>
+        </div>
+      
+    </div>
+
 
     <div class="translate">
         <div class="translate-button translate-button-active" language="english">EN</div>
@@ -119,6 +137,38 @@
 </section>
 
 
+<section class="roadmap margin-top-4">
+        
+    <div class="steps-frame display-grid ">
+        <div class="steps-bodoy ">
+            <div class="explain-frame-column display-grid grid-template-columns-2 grid-template-columns-1-m1279px">
+                <div class="explain-frame  text-align-center-m1279px word-spacing--2 ">
+                 </div>
+
+            </div>
+         
+            <div class="explain-image-frame margin-top-4">
+             <!-- <video  class="explain-center-image-frame" controls poster="../img/portfolio/UnrealEngine5/Demo.png">
+                    <source src="../video/UnrealEngineDemo.mp4" type="video/mp4">
+                  </video>  -->
+
+<!-- 
+                  <iframe  class="explain-center-image-frame" src="https://1drv.ms/v/s!ArsIg5eHlQtZcJPY4bDfAx2boVE?embed=1" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+                  <iframe  class="explain-center-image-frame"  src="https://drive.google.com/file/d/1gyQMws9q99RszqtRAgNm-Zd3vvWWpLVP/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
+
+             
+            </div>
+        </div>
+        
+    </div>
+
+
+ 
+</section>
+
+
+
+
 
 <section class="margin-top-5 " >
         
@@ -152,6 +202,8 @@
         </div>
      
     </section>
+
+    
 
     <section class="roadmap margin-top-4 padding-top-4">
         
@@ -607,6 +659,9 @@
 <!-- <script src="../js/utils.js"></script> -->
  <script>
 
+
+const body = document.querySelector('body');
+const loadPageFrame = document.querySelector('.load-page-frame');
 const translateButtons = document.querySelectorAll('.translate-button');
 const h2 = document.querySelectorAll('h2')
 const backButton = document.querySelectorAll('.back-button h4')
@@ -630,6 +685,14 @@ scrollBtn.addEventListener('click', function() {
     document.querySelector('html').scrollTo({ top: 0, behavior: 'smooth' });
     document.querySelector('body').scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+window.onload = function()
+{
+    body.classList.remove('overflow-hidden')
+    body.classList.add('overflow-auto')
+    loadPageFrame.classList.add('load-page-frame-animation')
+
+}
 
 
 
