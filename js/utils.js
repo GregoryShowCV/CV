@@ -83,9 +83,7 @@ window.onload = function()
 
 
 
-function BlendderLink() {
-    window.location.href = "https://gregoryshowcv.github.io/CV/pages/Blerder.html";
-}
+
 
 brochureImagePhotoHovers.forEach((brochureImagePhotoHover, index) => {
     brochureImagePhotoHover.addEventListener('mouseover', () => {
